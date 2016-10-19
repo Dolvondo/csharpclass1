@@ -1,12 +1,18 @@
-﻿using System;
-
-namespace ConsoleApplication
+﻿
+using System;
+public class Program
 {
-    public class Program
+    public static PowerUp Health = new PowerUp(); // "Static" means reachable
+    public static PowerUp Ammo = new PowerUp();
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+    
+       Health.duration = 10;
+       Health.RunPowerUp();
+       Console.WriteLine(Health.duration);
+       Ammo.RunPowerUp();
+
+       Health.RechargePowerUp(20);
+       Ammo.RechargePowerUp(300);
     }
 }
