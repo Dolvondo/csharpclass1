@@ -1,18 +1,14 @@
 ﻿
 using System;
 public class Program
-{
-    public static PowerUp Health = new PowerUp(); // "Static" means reachable
-    public static PowerUp Ammo = new PowerUp();
+{   
+    
+    public static Game myGame = new Game(); //Made this into an instance which is an object
     public static void Main(string[] args)
     {
-    
-       Health.duration = 10;
-       Health.RunPowerUp();
-       Console.WriteLine(Health.duration);
-       Ammo.RunPowerUp();
-
-       Health.RechargePowerUp(20);
-       Ammo.RechargePowerUp(300);
+        Console.WriteLine("Please type in your name");
+        myGame.name = Console.ReadLine();
+        Console.WriteLine("Your Player name is " + myGame.name);
+        
     }
 }
