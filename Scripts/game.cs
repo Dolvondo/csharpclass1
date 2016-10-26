@@ -2,12 +2,25 @@ using System;
 public class Game { //This is the cookie cutter
     public Game() { //"Game" Represents a constructor. This runs when the game class is created.
 //Is a function that runs when the instance of an object is created
-        Gun.Fire();
         Health.power = 100;
         Health.message = "You are getting stronger.";
         Ammo.message = "You have more ammo.";
-        Console.WriteLine(Health.power);
-        Console.WriteLine(Ammo.power);
+     
+    }
+    public void Start () {
+        Health.RunPowerUp();
+        /*
+        After prompting the game for a name we:
+        Enter a cave and find health.
+        Meet a dragon. (need an enemy class)
+        Pick weapon.
+        Battle the dragon.
+        If we win: get Health and ammo
+        If dragon wins: lose health
+
+
+
+        */
     }
     //Game PowerUps
     public PowerUpBase Health = new PowerUpBase();
