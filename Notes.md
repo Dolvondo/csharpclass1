@@ -1,6 +1,10 @@
 csharpclass
 Notes:
 
+Sudo Coding - write code with no code it's just comments.
+
+------------------
+
 static - means reachable by other files, "Global" - referencing the cookie cutter
 public - Viewable by other objects "Is an access modifier"
 instancing - is a copy of an object - is the cookie, but not the same as other cookies
@@ -10,6 +14,8 @@ reference - anything that is static is referenced. Data that mention the source 
 constructor - is the same name as the class and is called when the class is run. When it loads into your RAM the constructor runs. Common in javascript.
     - Runs before programs run
     - Building things the class needs to run
+bool - yes or no? True or false?
+length - counts the amount of arrays in a variable. Starting with number 1. 
 
 Strategies -
 --- Classes are objects that can store/(give away) attributes, which variables can ask for and assign themselves a default attribute. Another file will be for actually setting the proper
