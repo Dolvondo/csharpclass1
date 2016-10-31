@@ -6,18 +6,20 @@ public class Game { //This is the cookie cutter
         Health.message = "You are getting stronger.";
         Ammo.message = "You have more ammo.";
         Cave.StartMessage = "You have entered a cave.";
-     
+        UnderWater.objects = new string[] {"Sea Weed", "Coral", "Fish", "Shark"}; // This line replaces the original path of walking itself.
     }
     public void Start () {
         
         Console.WriteLine("Please type in your name");
         name = Console.ReadLine();
         Console.WriteLine("Your player name is " + name);
-        Walk();
+        Cave.Enter();
         while(Program.canPlay) {
-            Walk();
+            GameTimer();
+            Play();
         } 
         Console.WriteLine("You died");
+        Console.WriteLine("Game Over");
         /*
         After prompting the game for a name we:
         Enter a cave and find health.
@@ -28,13 +30,16 @@ public class Game { //This is the cookie cutter
         If dragon wins: lose health
         */
     }
-  private void Walk (){
+  private void Play (){
         Random randomNum = new Random();
-        Cave.Enter();
         Cave.Encounter(randomNum.Next(0, Cave.objects.Length));
   }
+    public static void GameTimer () {
+        System.Threading.Thread.Sleep(2000);
+    }
     //Game levels
     private LevelBase Cave = new LevelBase();
+    public static LevelBase UnderWater = new LevelBase();
     //Game PowerUps
     
     public PowerUpBase Health = new PowerUpBase();

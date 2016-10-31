@@ -14,7 +14,7 @@ reference - anything that is static is referenced. Data that mention the source 
 constructor - is the same name as the class and is called when the class is run. When it loads into your RAM the constructor runs. Common in javascript.
     - Runs before programs run
     - Building things the class needs to run
-bool - yes or no? True or false?
+bool / boolean - A variable type that stores "True" or "false"
 length - counts the amount of arrays in a variable. Starting with number 1. 
 
 Strategies -
