@@ -2,9 +2,9 @@ using System;
 public class LevelBase {
     public string StartMessage;
     public bool entranceOpen = true; //bool means its asking if it is true or false
-    public string[] environment = {"Cold", "Wet", "Dark", };
+    public string[] environment;
 
-    public string[] objects = {"Rocks", "Ravine", "River", "Lava"};
+    public string[] objects;
 
     public void Enter (){
         Console.WriteLine(StartMessage);

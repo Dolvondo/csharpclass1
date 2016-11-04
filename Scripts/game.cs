@@ -38,7 +38,7 @@ public class Game { //This is the cookie cutter
         System.Threading.Thread.Sleep(2000);
     }
     //Game levels
-    private LevelBase Cave = new LevelBase();
+    private LevelBase Cave = new CaveLevel();
     public static LevelBase UnderWater = new LevelBase();
     //Game PowerUps
     
