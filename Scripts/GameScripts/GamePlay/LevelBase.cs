@@ -1,38 +1,49 @@
 using System;
 public class LevelBase {
+
+    public LevelBase () {
+        Game.StartGame += RunLevel;
+    }
+
+    private void RunLevel()
+    {
+        Console.WriteLine("Hey Anthony");
+    }
+
     public string StartMessage;
-    public bool entranceOpen = true; //bool means its asking if it is true or false
-    public string[] environment;
-
-    public string[] objects;
-
+    public bool entranceOpen = true;
+    public string[] environment = {"Cold", "Wet", "Dark" };  
+    public string[] objects = {"Rocks", "Ravine", "River", "Lava"};
     public void Enter (){
         Console.WriteLine(StartMessage);
     }
-    public void Encounter (int i) {
-        switch (i)
+    public void Encounter (int i, string traveled){
+            switch (i)
             {
-            case 0:
-            Console.WriteLine("You've walked into " + objects[i]);   
-            break;
-            case 1:
-            Console.WriteLine("You've walked into " + objects[i]);   
-            break;
-            case 2:
-            Game.GameTimer();
-            Console.WriteLine("You've walked into " + objects[i]);
-            Random randomNum = new Random();
-            Game.UnderWater.Encounter(randomNum.Next(0, Game.UnderWater.objects.Length));
-            break;
-            case 3:
-            Console.WriteLine("You've walked into " + objects[i]);
-            Program.canPlay = false;  
-            break;
-            Console.WriteLine("You've walked into " + objects[i]);   
-            default:
-            Console.WriteLine("Your path is clear");
-            break;
-            }  
-                          
-    }
+                case 0:
+                    Console.WriteLine("You've " + traveled + " into " + objects[i]);
+                break;
+
+                case 1:
+                    Console.WriteLine("You've " + traveled + " into " + objects[i]);
+                break;
+    
+                case 2:
+                    Console.WriteLine("You've " + traveled + " into " + objects[i]);
+                    Game.GameTimer();
+                    Random randomNum = new Random();
+                    Game.UnderWater.Encounter(randomNum.Next(0, Game.UnderWater.objects.Length), "swam");
+                break;
+
+                case 3:
+                //Lava Kills us and ends the game
+                    Console.WriteLine("You've " + traveled + " into " + objects[i]);
+                    Game.canPlay = false;
+                break;
+
+                default:
+                    Console.WriteLine("Your path is clear");
+                break;
+            }    
+    } 
 }
