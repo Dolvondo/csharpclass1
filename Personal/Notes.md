@@ -17,6 +17,9 @@ constructor - is the same name as the class and is called when the class is run.
     - Constructer, automatically runs, looks like this  "public Name () {}"
 bool / boolean - A variable type that stores "True" or "false"
 length - counts the amount of arrays in a variable. Starting with number 1. 
+enum - used to store multiple entities that is not a string or an integer. Used as keywords
+       that other instances can reference to without feedback errors. The created entities 
+       literally stores nothing. AKA: A label
 
 
 Strategies -
