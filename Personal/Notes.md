@@ -20,7 +20,7 @@ length - counts the amount of arrays in a variable. Starting with number 1.
 enum - used to store multiple entities that is not a string or an integer. Used as keywords
        that other instances can reference to without feedback errors. The created entities 
        literally stores nothing. AKA: A label
-
+identifier - a crucial part of code that tells a page that a certain class exists
 
 Strategies -
 --- Classes are objects that can store/(give away) attributes, which variables can ask for and assign themselves a default attribute. Another file will be for actually setting the proper
@@ -36,3 +36,11 @@ If anything doesnt make sense reboot Visual studio
 
     Others----------------------------
         - string[]
+
+------------  Random Numbers ----
+        Random rnd = new Random();
+int month = rnd.Next(1, 13); // creates a number between 1 and 12
+int dice = rnd.Next(1, 7);   // creates a number between 1 and 6
+int card = rnd.Next(52);     // creates a number between 0 and 51
+---------------------------------------------------------
+

@@ -9,6 +9,7 @@ public class Game {
     {
         System.Threading.Thread.Sleep(2000);
     }
+    People People = new People();
     public void menu () {
         Console.WriteLine("::::::Menu::::::");
         Console.WriteLine("Welcome to 'Mr. President'!");
@@ -57,11 +58,39 @@ public class Game {
                     if (playerInput == "y") {
                         Console.WriteLine("Ms. Grace:: I always knew you were a great leader. Now there are several citizens awaiting your judgement.");
                     }
-                    Console.WriteLine("* Ms. Grace opens the door and the first citizen stands before you *");
+                    Console.WriteLine("Ms. Grace:: Oh silly me! I almost forgot! You always start with " + status.population + " population in your country, and " + status.happiness + " happiness, and " + status.currency + " currency.");
+                    Console.WriteLine("If you ever need to know the status it will always appear after each question. Okay, now I will open the door for our guests");
+                    Console.WriteLine("* Ms. Grace opens the door*");
+                    status.stage = 1;
+                    stageLevel();
                break;   
                case 1:
-                    
-
+                    Console.WriteLine("***********************************************************************************************************");
+                    Console.WriteLine("A citizen approaches and stands before you"); //Log
+                    Console.WriteLine("Population: " + status.population + " ||| Happiness: " + status.happiness + " ||| Currency: " + status.currency);
+                    People.pickAProblem();
+                    playerInput = Console.ReadLine();
+                    if (playerInput == "y") {
+                        status.population += People.YP;
+                        status.happiness += People.YH;
+                        status.currency += People.YC;
+                        Console.WriteLine(People.postiveResponse);
+                        Console.WriteLine("Population: " + People.YP);
+                        Console.WriteLine("Happiness: " + People.YH);
+                        Console.WriteLine("Currency: " + People.YC);
+                    }
+                    if (playerInput == "n") {
+                        status.population += People.NP;
+                        status.happiness += People.NH;
+                        status.currency += People.NC;
+                        Console.WriteLine(People.negativeResponse);
+                        Console.WriteLine("Population: " + People.NP);
+                        Console.WriteLine("Happiness: " + People.NH);
+                        Console.WriteLine("Currency: " + People.NC);
+                    }
+                    GameTimer();
+                    stageLevel();
+                    //NEXT : Im going to add a time clock that haves the days cycle by. 
                break;
                case 2:
 
