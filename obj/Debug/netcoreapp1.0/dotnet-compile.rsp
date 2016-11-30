@@ -1,5 +1,5 @@
---temp-output:C:\Users\Marshall\csharpclass\obj\Debug\netcoreapp1.0\
---out:C:\Users\Marshall\csharpclass\bin\Debug\netcoreapp1.0\csharpclass.dll
+--temp-output:c:\Users\Marshall\csharpclass\obj\Debug\netcoreapp1.0\
+--out:c:\Users\Marshall\csharpclass\bin\Debug\netcoreapp1.0\csharpclass.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -87,4 +87,7 @@
 --reference:C:\Users\Marshall\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\Marshall\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\Marshall\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
-C:\Users\Marshall\csharpclass\Program.cs
+c:\Users\Marshall\csharpclass\Program.cs
+c:\Users\Marshall\csharpclass\Game\Game.cs
+c:\Users\Marshall\csharpclass\Game\Settings\statistics.cs
+c:\Users\Marshall\csharpclass\Game\Stages\stage.cs

@@ -6,7 +6,12 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Game MyGame = new Game();
+            
+            
+            Console.WriteLine("...Running Game...");
+            MyGame.menu();
+            
         }
     }
 }
