@@ -31,12 +31,12 @@ public class Game {
         status.population = 100;
         status.happiness = 100;
         status.currency = 100;
-        status.stage = 1;
+        status.stage = 0;
         stageLevel();
     }
        public void stageLevel () {
            switch (status.stage) {
-               case 1:
+               case 0:
                     //Data of name, name of land and country
                     Console.WriteLine("Please enter your name:");
                     status.name = Console.ReadLine();
@@ -58,8 +58,11 @@ public class Game {
                         Console.WriteLine("Ms. Grace:: I always knew you were a great leader. Now there are several citizens awaiting your judgement.");
                     }
                     Console.WriteLine("* Ms. Grace opens the door and the first citizen stands before you *");
-
                break;   
+               case 1:
+                    
+
+               break;
                case 2:
 
                break;

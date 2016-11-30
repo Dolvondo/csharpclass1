@@ -1,9 +1,5 @@
-﻿using System;
-
-namespace ConsoleApplication
+﻿public class Program
 {
-    public class Program
-    {
         public static void Main(string[] args)
         {
             Game MyGame = new Game();
@@ -13,5 +9,4 @@ namespace ConsoleApplication
             MyGame.menu();
             
         }
-    }
 }

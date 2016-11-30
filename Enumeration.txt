@@ -1,0 +1,3 @@
+An enumeration is a "label". It is not an integer nor a string or a float. It literally stores nothing. 
+And it primary purpose is to act like a keyword that other instances can have a reference to. A good use for it
+would be for switches, or changing game modes within a game.
