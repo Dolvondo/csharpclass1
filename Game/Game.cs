@@ -78,6 +78,13 @@ public class Game {
                         Console.WriteLine("Population: " + People.YP);
                         Console.WriteLine("Happiness: " + People.YH);
                         Console.WriteLine("Currency: " + People.YC);
+                    //------ Activates story mode in certain cases----
+                        switch (People.pickproblem) {
+                            case 5:
+                            People.exploration = true;
+                            break;
+                        }
+                    
                     }
                     if (playerInput == "n") {
                         status.population += People.NP;
@@ -87,6 +94,12 @@ public class Game {
                         Console.WriteLine("Population: " + People.NP);
                         Console.WriteLine("Happiness: " + People.NH);
                         Console.WriteLine("Currency: " + People.NC);
+                        switch (People.pickproblem) {
+                           case 5:
+                           break;
+                        }
+                    
+                    
                     }
                     GameTimer();
                     stageLevel();

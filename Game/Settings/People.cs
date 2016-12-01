@@ -8,12 +8,16 @@ public static int YC; // Yes that effects Currency
 public static int NC; // No that effects Currency
 public static string negativeResponse;
 public static string postiveResponse;
+public int pickproblem;
+
+public bool exploration = false;
 
 int numberofproblems = 3;
 
 public void pickAProblem() {
     Random rnd = new Random();
-int pickproblem = rnd.Next(1, numberofproblems + 1 );
+pickproblem = rnd.Next(1, numberofproblems + 1 );
+
  Console.WriteLine(pickproblem); // Log
     switch (pickproblem) {
         case 1:
@@ -47,9 +51,42 @@ int pickproblem = rnd.Next(1, numberofproblems + 1 );
           postiveResponse = "*Leaves and comes back* We've chased them away, however they've killed a few of us in the endeavour";
           negativeResponse = "*Leaves and comes back* Good call sir, turns out these indians were friendly and gave us some goodies!";
         break;
-        case 4: //Same line of Indians scaring people, but saying no will have them attack
-        break;
+        case 4:
+          Console.WriteLine("Soldier: There are Indians that are scaring our people, should we attack them?");
+          //If Yes   If No
+          YP = 0; NP = -5; //population
+          YH = 1; NH = 0; // happiness
+          YC = 10; NC = -10; //Currency
 
+          postiveResponse = "*Leaves and comes back* Our attack was successful! We've collected spoils of war!";
+          negativeResponse = "*Leaves and comes back* The Indians killed off some of our farmers and robbed us!";
+        break;
+        case 5:
+            if (exploration == false) {
+            Console.WriteLine("Explorer: My lord, I wish to go exploring in your name, may I go?" );
+          //If Yes   If No
+          YP = -1; NP = 0; //population
+          YH = 0; NH = 0; // happiness
+          YC = 0; NC = 0; //Currency
+          
+
+          postiveResponse = "I wont let you down sir!";
+          negativeResponse = "Aww whats the harm sir? *Leaves*";
+          } else {
+            Console.WriteLine("Explorer: My lord, I wish to go exploring in your name, may I go?" );
+          //If Yes   If No
+          YP = -1; NP = 0; //population
+          YH = 0; NH = 0; // happiness
+          YC = 0; NC = 0; //Currency
+          
+
+          postiveResponse = "I wont let you down sir!";
+          negativeResponse = "Aww whats the harm sir? *Leaves*";  
+          }
+        break;
+        
+              
+       
     }
 
 
