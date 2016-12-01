@@ -81,7 +81,10 @@ public class Game {
                     //------ Activates story mode in certain cases----
                         switch (People.pickproblem) {
                             case 5:
-                            People.exploration = true;
+                            if (People.exploration == false) {People.exploration = true;}
+                            break;
+                            case 6:
+                            if (People.expansion == false) {People.expansion = true;}
                             break;
                         }
                     

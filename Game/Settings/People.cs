@@ -9,10 +9,11 @@ public static int NC; // No that effects Currency
 public static string negativeResponse;
 public static string postiveResponse;
 public int pickproblem;
-
+//Story based variables
 public bool exploration = false;
-
-int numberofproblems = 3;
+public bool expansion = false;
+//-------
+int numberofproblems = 6;
 
 public void pickAProblem() {
     Random rnd = new Random();
@@ -73,15 +74,40 @@ pickproblem = rnd.Next(1, numberofproblems + 1 );
           postiveResponse = "I wont let you down sir!";
           negativeResponse = "Aww whats the harm sir? *Leaves*";
           } else {
-            Console.WriteLine("Explorer: My lord, I wish to go exploring in your name, may I go?" );
+            Console.WriteLine("Explorer: I've come back and found riches! Would you like some sir?");
           //If Yes   If No
-          YP = -1; NP = 0; //population
+          YP = 0; NP = 0; //population
+          YH = 0; NH = 0; // happiness
+          YC = 100; NC = 0; //Currency
+          
+
+          postiveResponse = "I can't wait to tell the people my story! *Leaves*";
+          negativeResponse = "Okay then... *Walks out confused*";  
+          exploration = false;
+          }
+        break;
+        case 6:
+          if (exploration == false) {
+          Console.WriteLine("Builder Bob: Hey buddy, I think we should expand the city, it'll cost a bit, what do ya say?");
+          //If Yes   If No
+          YP = 0; NP = 0; //population
+          YH = 0; NH = 0; // happiness
+          YC = -30; NC = 0; //Currency
+          
+
+          postiveResponse = "Alright! Let's get to work!";
+          negativeResponse = "What ever you say, *exits*";
+          } else {
+              Console.WriteLine("Builder Bob: Alright bub, the borders been expanded, and some peeps wanna move in.");
+          //If Yes   If No
+          YP = 20; NP = 0; //population
           YH = 0; NH = 0; // happiness
           YC = 0; NC = 0; //Currency
           
 
-          postiveResponse = "I wont let you down sir!";
-          negativeResponse = "Aww whats the harm sir? *Leaves*";  
+          postiveResponse = "Enjoy your day sir.";
+          negativeResponse = "What ever you say, *exits*";
+          expansion = false;
           }
         break;
         
