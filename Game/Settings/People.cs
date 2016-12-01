@@ -110,7 +110,26 @@ pickproblem = rnd.Next(1, numberofproblems + 1 );
           expansion = false;
           }
         break;
-        
+        case 7:
+            Console.WriteLine("Magician: Hello there Prez, I can do magical things, care to give it I try?");
+          //If Yes   If No
+          YP = 0; NP = 0; //population
+          YH = 5; NH = 0; // happiness
+          YC = 100; NC = 0; //Currency
+
+          postiveResponse = "Looks like fortune smiles upon you sir!";
+          negativeResponse = "Aww... was it something I said?";
+        break;
+        case 8:
+        Console.WriteLine("Magician: Hello there Prez, I can do magical things, care to give it I try?");
+          //If Yes   If No
+          YP = 0; NP = 0; //population
+          YH = 0; NH = -5; // happiness
+          YC = 0; NC = -100; //Currency
+
+          postiveResponse = "OH MY GOSH! I messed up! SORRY SIR... I'll practice more *runs away*";
+          negativeResponse = "Aww... was it something I said?";
+        break;
               
        
     }
