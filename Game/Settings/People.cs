@@ -8,10 +8,10 @@ public static int YC; // Yes that effects Currency
 public static int NC; // No that effects Currency
 public static string negativeResponse;
 public static string postiveResponse;
-public int pickproblem;
+public static int pickproblem;
 //Story based variables
-public bool exploration = false;
-public bool expansion = false;
+public static bool exploration = false;
+public static bool expansion = false;
 //-------
 int numberofproblems = 6;
 
@@ -87,7 +87,7 @@ pickproblem = rnd.Next(1, numberofproblems + 1 );
           }
         break;
         case 6:
-          if (exploration == false) {
+          if (expansion == false) {
           Console.WriteLine("Builder Bob: Hey buddy, I think we should expand the city, it'll cost a bit, what do ya say?");
           //If Yes   If No
           YP = 0; NP = 0; //population
