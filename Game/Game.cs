@@ -2,7 +2,7 @@ using System;
 
 public class Game {
     //Variables:
-    string playerInput;
+   public string playerInput;
     //Identifiers:
     statistics status = new statistics();
     public static void GameTimer()
@@ -70,14 +70,14 @@ public class Game {
                     Console.WriteLine("Population: " + status.population + " ||| Happiness: " + status.happiness + " ||| Currency: " + status.currency);
                     People.pickAProblem();
                     playerInput = Console.ReadLine();
-                    if (playerInput == "y") {
+                   /** if (playerInput == "y") {
                         status.population += People.YP;
                         status.happiness += People.YH;
                         status.currency += People.YC;
                         Console.WriteLine(People.postiveResponse);
                         Console.WriteLine("Population: " + People.YP);
                         Console.WriteLine("Happiness: " + People.YH);
-                        Console.WriteLine("Currency: " + People.YC);
+                        Console.WriteLine("Currency: " + People.YC); **/
                     //------ Activates story mode in certain cases----
                         switch (People.pickproblem) {
                             case 5:
@@ -89,7 +89,8 @@ public class Game {
                         }
                     
                     }
-                    if (playerInput == "n") {
+    /**                if (playerInput == "n") {
+                                              
                         status.population += People.NP;
                         status.happiness += People.NH;
                         status.currency += People.NC;
@@ -97,13 +98,10 @@ public class Game {
                         Console.WriteLine("Population: " + People.NP);
                         Console.WriteLine("Happiness: " + People.NH);
                         Console.WriteLine("Currency: " + People.NC);
-                        switch (People.pickproblem) {
-                           case 5:
-                           break;
-                        }
+                        
+                        
                     
-                    
-                    }
+                    } **/
                     GameTimer();
                     stageLevel();
                     //NEXT : Im going to add a time clock that haves the days cycle by. 
