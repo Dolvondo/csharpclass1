@@ -1,0 +1,8 @@
+Javascript is great but in my personal opinion I like csharp way better.
+C sharp may be a more strict format in comparison to java script but that makes it have its benefits.
+Java script can only run itself on one file at a time, and because of this, it makes it harder to navigate 
+through as its script gets larger. C sharp can run altogether as a whole. Syntax wise, C sharp is a little more
+complicated, but it has its rewards. For example, to declare a variable in C# one must do public int Number;
+in Java script, its just var Number; The difference between the two is that c sharp can label a variable as 
+an integer or a script or a float. Making it easier for readers to identify what kind of variable he or she is observing.
+java script does not behave the same way. Again, Java script is messy.
