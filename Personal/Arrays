@@ -1,0 +1,6 @@
+Arrays:
+
+Instead of declaring a variable one at a time, arrays give the oppurtunity to store more with typing less. For example, Arrays and for loops work
+together very well and spontaneously. An example of using for loops and arrays would be for a gravity simulator. If you were placing
+several stars in orbit it would be a pain to program each star one at a time. Well, with arrays you don't need to because it can store a
+collection of data instead.
