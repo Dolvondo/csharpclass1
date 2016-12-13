@@ -1,0 +1,5 @@
+switch statements are an alternative to if statements. And in most cases has better potiential than if statements.
+Switch statements spontaneously check to see if its assigned data matches on of its qualifications given, then
+executes its programming. With this in mind it is capable of doing more than repeating the same line of code, and it is also
+easier on the eye than a whole list of if statements. Switch statements are great for setting up gamemodes, or
+navigating through pages for an example. It can check strings or integers.
